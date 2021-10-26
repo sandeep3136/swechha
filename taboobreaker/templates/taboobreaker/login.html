@@ -1,0 +1,83 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <title>Document</title>
+    <style>
+        .card-place {
+            margin-top: 100px;
+            margin-bottom: auto;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        img {
+          width: 140px;
+          height: 260px;
+          margin-top: 6px;
+        }
+
+        /* .card { background-color: rgba(245, 245, 245, 0.4); } */
+        
+        hr {
+          border: 10px black;
+        }
+        .card-body {
+          margin: 0 auto;
+        }
+
+        .card-title {
+          text-align: center;
+        }
+
+        body {
+            background:  linear-gradient(to right, rgba(255,0,0,0), rgb(9, 184, 97));
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="card border-primary mb-3 card-place" style="width: 22rem;">
+            <img src="{% static 'taboobreaker/pct.png' %}" class="card-img-top" alt="...">
+   
+            <div class="card-body">
+              <h5 class="card-title display-5">Login</h5>
+              <form action="" method="POST">
+                {% csrf_token %}
+                <p class="h5">Username</p>
+                <input type="text" name="username"> 
+                <br>
+                <p class="h5">Password</p>
+                <input type="password" name="password">
+                <input type="submit" class="btn-primary">
+              </form>
+            </div>
+            
+ 
+           
+            
+        
+          </div>
+    </div>
+    
+</body>
+</html>
+
+<!-- 
+{% block body %}
+    <h2>login</h2>
+    <form action="" method="POST">
+        {% csrf_token %}
+        <input type="text" name="username" placeholder="username"><br>
+        <input type="password" name="password" placeholder="password"><br>
+        <input type="submit">
+    </form>
+
+{% endblock %}  -->
